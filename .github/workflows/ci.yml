@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly freshness check against the newest in-range @platform-blocks/ui.
+    - cron: '0 6 * * 1'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Drop lockfile for freshness run
+        if: github.event_name == 'schedule'
+        run: rm -f package-lock.json
+      - run: npm install
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - name: Bundle the example for web
+        run: npx expo export --platform web
+        working-directory: example

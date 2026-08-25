@@ -1,0 +1,19 @@
+{
+  "name": "platform-blocks-extension-template-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "package",
+    "example"
+  ],
+  "scripts": {
+    "build": "npm --workspace package run build",
+    "test": "npm --workspace package run test",
+    "lint": "npm --workspace package run lint",
+    "typecheck": "npm --workspace package run typecheck",
+    "example": "npm --workspace example run start",
+    "release:patch": "npm --workspace package version patch && npm --workspace package publish",
+    "release:minor": "npm --workspace package version minor && npm --workspace package publish",
+    "release:major": "npm --workspace package version major && npm --workspace package publish"
+  }
+}
