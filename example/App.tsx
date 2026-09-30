@@ -5,30 +5,30 @@ import {
   Button,
   Card,
   Column,
-  PlatformBlocksProvider,
+  PlocksProvider,
   Text,
   Title,
-} from '@platform-blocks/ui';
-import { Marquee } from 'platform-blocks-extension-template';
+} from '@plocks/ui';
+import { Marquee } from 'plocks-extension-template';
 
 export default function App() {
   const [paused, setPaused] = React.useState(false);
 
   return (
     <SafeAreaProvider>
-      <PlatformBlocksProvider>
+      <PlocksProvider>
         <StatusBar style="auto" />
-        <Column style={{ flex: 1 }} justify="center" align="center" p="lg" gap="lg">
+        <Column style={{ flex: 1 }} justify="center" ta="center" p="lg" gap="lg">
           <Card variant="elevated" p="lg" style={{ maxWidth: 520, width: '100%' }}>
             <Column gap="md">
               <Title order={2}>Extension example</Title>
-              <Text colorVariant="secondary">
+              <Text c="secondary">
                 The Marquee below comes from the package/ workspace — edit
                 package/src and the change hot-reloads here.
               </Text>
               <Marquee speed={60} paused={paused}>
-                <Text weight="medium">
-                  Build your Platform Blocks extension from this template 🧱 It themes, tests,
+                <Text fw="medium">
+                  Build your plocks extension from this template 🧱 It themes, tests,
                   builds, and publishes out of the box.
                 </Text>
               </Marquee>
@@ -40,7 +40,7 @@ export default function App() {
             </Column>
           </Card>
         </Column>
-      </PlatformBlocksProvider>
+      </PlocksProvider>
     </SafeAreaProvider>
   );
 }

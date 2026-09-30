@@ -1,6 +1,6 @@
 {
-  "name": "platform-blocks-extension-template-root",
-  "version": "1.0.0",
+  "name": "plocks-extension-template-root",
+  "version": "0.1.0",
   "private": true,
   "workspaces": [
     "package",

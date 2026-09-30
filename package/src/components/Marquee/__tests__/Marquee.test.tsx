@@ -1,4 +1,4 @@
-import { PlatformBlocksProvider, Text } from '@platform-blocks/ui';
+import { PlocksProvider, Text } from '@plocks/ui';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import renderer, { act } from 'react-test-renderer';
 
@@ -15,11 +15,11 @@ describe('Marquee', () => {
     await act(async () => {
       tree = renderer.create(
         <SafeAreaProvider initialMetrics={TEST_SAFE_AREA_METRICS}>
-          <PlatformBlocksProvider>
+          <PlocksProvider>
             <Marquee testID="marquee">
               <Text>Breaking news</Text>
             </Marquee>
-          </PlatformBlocksProvider>
+          </PlocksProvider>
         </SafeAreaProvider>
       );
     });

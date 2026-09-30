@@ -1,13 +1,13 @@
 import React from 'react';
 import { Animated, Easing, View, type LayoutChangeEvent } from 'react-native';
-import { useTheme } from '@platform-blocks/ui';
+import { useTheme } from '@plocks/ui';
 
 import type { MarqueeProps } from './types';
 
 /**
  * Horizontally scrolling ticker. Content glides from the right edge to the
  * left, then loops with `gap` pixels of breathing room. Colors come from the
- * active Platform Blocks theme, so the component follows light/dark mode like
+ * active plocks theme, so the component follows light/dark mode like
  * any built-in component.
  */
 export function Marquee({

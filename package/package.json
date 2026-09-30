@@ -1,7 +1,7 @@
 {
-  "name": "platform-blocks-extension-template",
-  "version": "1.0.0",
-  "description": "Template for building a Platform Blocks extension",
+  "name": "plocks-extension-template",
+  "version": "0.1.0",
+  "description": "Template for building a plocks extension",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
@@ -24,8 +24,8 @@
   },
   "keywords": [
     "react-native",
-    "platform-blocks",
-    "platform-blocks-extension"
+    "plocks",
+    "plocks-extension"
   ],
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@platform-blocks/ui": ">=1.0.0",
+    "@plocks/ui": ">=0.1.0",
     "react": ">=18.0.0",
     "react-native": ">=0.73.0"
   },
@@ -52,7 +52,7 @@
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
-      "/node_modules/(?!(.pnpm|react-native|@react-native|@react-native-community|expo|@expo|@expo-google-fonts|react-navigation|@react-navigation|@sentry/react-native|native-base|standard-navigation|@platform-blocks|@tabler/icons-react-native|@shopify/flash-list|react-native-reanimated-carousel))",
+      "/node_modules/(?!(.pnpm|react-native|@react-native|@react-native-community|expo|@expo|@expo-google-fonts|react-navigation|@react-navigation|@sentry/react-native|native-base|standard-navigation|@plocks|@tabler/icons-react-native|@shopify/flash-list|react-native-reanimated-carousel))",
       "/node_modules/react-native-reanimated/plugin/",
       "/node_modules/@react-native/babel-preset/"
     ],

@@ -5,7 +5,7 @@ on:
     branches: [main]
   pull_request:
   schedule:
-    # Weekly freshness check against the newest in-range @platform-blocks/ui.
+    # Weekly freshness check against the newest in-range @plocks/ui.
     - cron: '0 6 * * 1'
 
 jobs:
@@ -16,9 +16,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Drop lockfile for freshness run
-        if: github.event_name == 'schedule'
-        run: rm -f package-lock.json
       - run: npm install
       - run: npm run lint
       - run: npm run typecheck
