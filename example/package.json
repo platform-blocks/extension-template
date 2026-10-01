@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@plocks/ui": "^0.1.0",
+    "@plocks/ui": "^0.2.0",
     "@react-native-masked-view/masked-view": "^0.3.2",
     "@shopify/flash-list": "^2.3.1",
     "@tabler/icons-react-native": "^3.46.0",

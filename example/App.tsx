@@ -18,7 +18,7 @@ export default function App() {
     <SafeAreaProvider>
       <PlocksProvider>
         <StatusBar style="auto" />
-        <Column style={{ flex: 1 }} justify="center" ta="center" p="lg" gap="lg">
+        <Column style={{ flex: 1 }} justify="center" align="center" p="lg" gap="lg">
           <Card variant="elevated" p="lg" style={{ maxWidth: 520, width: '100%' }}>
             <Column gap="md">
               <Title order={2}>Extension example</Title>
